@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import django-heroku
+import django_heroku
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-k0%fkx(&(2(ht(p-^nsom&k^f&eyxgg*gq%pe#ydv(5sm01#ze
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','kaustav-banksearches.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000','kaustav-banksearches.herokuapp.com']
 
 
 # Application definition
@@ -141,4 +142,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
    # 'SCHEMA' : 'bankinfo.schema.schema',
 #}
 
-django-heroku.settings(locals())
+django_heroku.settings(locals())
